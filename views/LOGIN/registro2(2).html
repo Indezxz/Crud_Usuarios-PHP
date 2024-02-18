@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PELIS DOG&reg; - REGISTRO</title>
+    <link rel="shortcut icon" href="./img/icono.JPG" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilo2.css">
+
+</head>
+<body  >
+
+    <a href="#"><img src="./img/logo.JPG"width="130" height="130" alt="InternetCtrl" ></a>
+    
+    <div  class="formulario" >
+
+        <h4 style="font-size:22px ; padding: 0%;">&nbsp;Paso 1.5 de 2</h4>
+        
+        <h1>Configura tu Pago</h1>
+
+        <div  class="contenedor">
+            <h4>PayPal:</h4>
+
+            <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AXNV_eJi6NaGLB-3ddx6g4OMtyWjVAh-bgPfT0OGHE9VWWBvzyQS9eBJSV5P3fE3jRaQ-djYQHb-1hA5&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"Suscripción única a PelisDog","amount":{"currency_code":"USD","value":5}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+
+            <h4>Codigo de Regalo:</h4>
+                <form action="../../controllers/codigoregalo.php" method="post">
+                    <div class="contraseña">
+                        <input type="password" name="codigo" id="" placeholder="Codigo de Regalo" required> 
+                        
+                    </div>
+                    
+                    <div>
+                        <input type="submit" value="CANJEAR" class="button"  >
+                        <br> <br>
+                        <p>¿Ya tienes una cuenta? <a class="link" href="../../index.html"> Inicia Sesión </a> </p>
+                        <p>¿Te equivocaste de plan? <a class="link" href="../LOGIN/registro1.html"> Volver </a> </p>
+                    </div>
+                </form>
+            
+
+
+
+        </div>
+
+    </div>
+    <br><br><br>
+
+
+</body>
+</html>

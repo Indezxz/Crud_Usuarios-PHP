@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PELIS DOG&reg; - LOGIN</title>
+    <link rel="shortcut icon" href="./views/CATALOGO/images/img/icono.JPG" type="image/x-icon">
+    <link rel="stylesheet" href="./views/LOGIN/css/estilo.css">
+    
+
+</head>
+<body background="./views/LOGIN/img/fondo.jpg" >
+    <a href="#"><img src="./views/LOGIN/img/logo.JPG"width="130" height="130" alt="InternetCtrl" ></a>
+    
+    
+    <form action="./controllers/login.php" class="formulario" method="post">
+
+    <h1>Iniciar Sesión</h1>
+
+        <div  class="contenedor">
+       
+            <div class="usuario">
+                <input type="text" name="usuario" id="" placeholder="Usuario" required> 
+
+            </div>
+
+            <div class="contraseña">
+                <input type="password" name="contraseña" id="" placeholder="Contraseña" required> 
+
+            </div>
+
+            <div>
+                <input type="submit" value="Iniciar Sesión" class="button" name="btnIniciar" >
+                <p>¿No tienes una cuenta? <a class="link" href="./views/LOGIN/registro1.html"> Regístrate ahora </a> </p>
+               
+            </div>
+
+
+        </div>
+
+    </form>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>PELIS DOG&reg; - CATÁLOGO PELÍCULAS</title>
+
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link rel="shortcut icon" href="./images/img/icono.JPG" type="image/x-icon">
+
+	<script src="https://kit.fontawesome.com/b355a0cb3a.js" crossorigin="anonymous"></script>
+	
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body background="./images/img/fondo.jpg">
+	<!-- HEADER / BUSCADOR -->
+	<header>
+        <div class="logo">
+            <img class="dogg" src="./images/img/peliis doog.png" alt="" >
+            <img class="nombre" src="./images/img/nombre_doog.png" alt="">
+        </div>
+        
+
+        <div class="nav-menu">
+            <input type="checkbox" id="check">
+             <label for="check" class="checkbtn">
+                 <i class="menu-icon"><img src="./images/img/bars.1" alt="">
+                    </i>
+             </label>
+            <ul>
+                <a href="../PELICULAS/peliculas.html" class="nav-link">INICIO</a>
+                <a href="../CATALOGO/index.html" class="nav-link">CATALOGO</a>
+                <a href="../NOSOTROS/NOSOTROS.html" class="nav-link">NOSOTROS</a>
+                <a href="../EQUIPO/equipo.html" class="nav-link">EQUIPO</a>
+                <a href="../CONTACTO/contactoss13.html" class="nav-link">CONTACTO</a>
+                <a href="../../controllers/validar.php" class="nav-login">MENÚ PRINCIPAL</a>
+            </ul>    
+        </div>
+    </header>
+
+	<!-- FILTRADOR DE PELICULAS -->
+	
+	<div class="wrap">
+		<h1>PELÍCULAS POR GÉNERO</h1>
+		<div class="store-wrapper">
+			<div class="category_list">
+				<a href="#" class="category_item" category="all">Todo</a>
+				<a href="#" class="category_item" category="accion">Acción</a>
+				<a href="#" class="category_item" category="terror">Terror</a>
+				<a href="#" class="category_item" category="animacion">Animación</a>
+				<a href="#" class="category_item" category="comedia">Comedia</a>
+				<a href="#" class="category_item" category="ciencia">Ciencia Ficción</a>
+			</div>
+			<section class="products-list">
+				
+				<!--PELICULAS DE ACCIÓN-->
+				<div class="product-item" category="accion">
+					<img src="./images/fast and furius (accion).jpg" alt="" >
+					<a href="../PELIS/peli.php">Fast & Furius 9</a>
+				</div>
+
+				<div class="product-item" category="accion">
+					<img src="./images/the-tomorrow-war(acción).jpg" alt="" >
+					<a href="#">The Tomorrow War</a>
+				</div>
+
+				<div class="product-item" category="accion">
+					<img src="./images/uncharted (accion).jpg" alt="" >
+					<a href="#">Uncharted</a>
+				</div>
+
+				<!--PELICULAS DE TERROR-->
+				<div class="product-item" category="terror">
+					<img src="./images/dark web (terror).jpg" alt="" >
+					<a href="#">Unfried: Dark Web</a>
+				</div>
+
+				<div class="product-item" category="terror">
+					<img src="./images/the unholy (terror).png" alt="" >
+					<a href="#">The Unholy</a>
+				</div>
+
+				<div class="product-item" category="terror">
+					<img src="./images/umma (terror).jpg" alt="" >
+					<a href="#">Umma</a>
+				</div>
+
+				<!--PELICULAS DE ANIMACIÓN-->
+				<div class="product-item" category="animacion">
+					<img src="./images/encanto (animación).jpeg" alt="" >
+					<a href="#">Encanto</a>
+				</div>
+
+				<div class="product-item" category="animacion">
+					<img src="./images/red (animación).jpeg" alt="" >
+					<a href="../PELIS/red.php">Turning Red</a>
+				</div>
+
+				<div class="product-item" category="animacion">
+					<img src="./images/zootopia (animacion).jpg" alt="" >
+					<a href="#">Zootopia</a>
+				</div>
+
+				<!--PELICULAS DE COMEDIA-->
+				<div class="product-item" category="comedia">
+					<img src="./images/blended(comedia).jpg" alt="" >
+					<a href="#">Blended</a>
+				</div>
+
+				<div class="product-item" category="comedia">
+					<img src="./images/paddington (comedia).jpg" alt="" >
+					<a href="#">Paddington</a>
+				</div>
+
+				<div class="product-item" category="comedia">
+					<img src="./images/the hangover (comedia).jpg" alt="" >
+					<a href="#">The Hangover</a>
+				</div>
+
+				<!--PELICULAS DE CIENCIA FICCIÓN-->
+				<div class="product-item" category="ciencia">
+					<img src="./images/adam-project (sci-fi).jpg" alt="" >
+					<a href="#">Adam Project</a>
+				</div>
+
+				<div class="product-item" category="ciencia">
+					<img src="./images/dune (sci-fi).jpg" alt="" >
+					<a href="#">Dune</a>
+				</div>
+
+				<div class="product-item" category="ciencia">
+					<img src="./images/moonfall(sci fi).jpg" alt="" >
+					<a href="#">Moonfall</a>
+				</div>
+
+			</section>
+		</div>
+	</div>
+
+	<!--CHATBOT-->
+	<script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://chats.landbot.io/v3/H-1262140-BEDWZOIDRHGRAT91/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+	<!--::::Pie de Pagina::::::-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="./images/img/peliis doog.png" alt="Logo de SLee Dw" width="60px" height="180px">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Pelis Dog fue creado por el Grupo 10 del Curso del Taller Programación Web. </p>
+                <p>Es un servicio de Streaming por suscripción que les permite a sus usuarios ver series y películas sin publicidad, en un dispositivo con conexiónn a internet.</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100082458677045" class="fa fa-facebook"></a>
+                    <a target="_blank"  href="https://www.instagram.com/peliss_dog/" class="fa fa-instagram"></a>
+                    <a target="_blank" href="https://twitter.com/AdeDiaz88373560" class="fa fa-twitter"></a>
+                    <a target="_blank" href="https://chat.whatsapp.com/HEGTPGRE4tiDCP0boewusy" class="fa-brands fa-whatsapp"></a>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>PELIS DOG</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+<!--::::Pie de Pagina::::::-->
+
+
+</body>
+</html>
